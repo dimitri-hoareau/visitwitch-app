@@ -9,3 +9,11 @@ fichier .env, exemple :
 twitch id et secret : lien vers la procédure
 
 
+docker-compose up -d
+
+docker exec -it visitwitch-mongodb mongosh -u admin -p password
+
+
+use visitwitch
+
+db.watched_videos.find()

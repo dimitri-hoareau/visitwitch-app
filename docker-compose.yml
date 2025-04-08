@@ -29,6 +29,16 @@ services:
     networks:
       - visitwitch-network
 
+  frontend:
+    build: ./frontend
+    container_name: visitwitch-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    networks:
+      - visitwitch-network
+
 volumes:
   mongodb_data:
 
